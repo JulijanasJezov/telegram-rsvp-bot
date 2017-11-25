@@ -14,7 +14,7 @@ class AttendeesService(private val attendeeRepository: AttendeeRepository, priva
 
         if (rsvpList != null) {
             attendeeRepository.save(Attendee(null, attendeeName, rsvpList))
-            return "Added $attendeeName"
+            return "Added @$attendeeName to #$rsvpListName"
         }
 
         return "RSVP List is not found"

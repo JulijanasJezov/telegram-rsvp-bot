@@ -11,5 +11,5 @@ class RsvpService(private val rsvpRepository: RsvpRepository) {
 
     fun getRsvpLists(): List<RsvpList> = rsvpRepository.findAll()
 
-    fun getRsvpList(list: String): List<String>? = rsvpRepository.findByName(list).attendees?.map { it.name }
+    fun getRsvpList(list: String): List<String>? = rsvpRepository.findByName(list)?.attendees?.map { it.name }
 }

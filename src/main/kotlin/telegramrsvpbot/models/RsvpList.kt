@@ -14,5 +14,5 @@ data class RsvpList(
         @NotNull
         var name: String,
 
-        @OneToMany(mappedBy = "rsvpList")
+        @OneToMany(mappedBy = "rsvpList", fetch = FetchType.EAGER)
         val attendees: List<Attendee>? = null)

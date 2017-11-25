@@ -6,5 +6,5 @@ import telegramrsvpbot.models.RsvpList
 
 @Repository
 interface RsvpRepository: JpaRepository<RsvpList, Int> {
-    fun findByName(name: String): RsvpList
+    fun findByName(name: String): RsvpList?
 }
