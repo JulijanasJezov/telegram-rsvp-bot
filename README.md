@@ -20,14 +20,14 @@ Features include:
 RSVP bot is written in [Kotlin](https://kotlinlang.org/), with build managed by [Gradle](https://gradle.org/)
 
 **Java**
--- check current version `java -version`
--- install (with homebrew) `brew update && brew cask install java`
--- install (manual) [https://www.java.com/en/download/help/download_options.xml](https://www.java.com/en/download/help/download_options.xml)
+- check current version `java -version`
+- install (with homebrew) `brew update && brew cask install java`
+- install (manual) [https://www.java.com/en/download/help/download_options.xml](https://www.java.com/en/download/help/download_options.xml)
 
 **Gradle**
--- check current version `gradle -v`
--- install with homebrew `brew update && brew install gradle`
--- install with scoop `scoop install gradle`
+- check current version `gradle -v`
+- install with homebrew `brew update && brew install gradle`
+- install with scoop `scoop install gradle`
 
 ### Installation
 - `git clone https://github.com/JulijanasJezov/telegram-rsvp-bot.git`
