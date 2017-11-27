@@ -9,20 +9,27 @@ Features include:
 - Add/remove attendees
 - List current atendees
 
-### Installation
+### Usage
+- Create an event: `/create [event name]`
+- Add attendee: `/rsvp [attendee name]`
+- Remove attendee: `/unrsvp [attendee name]`
+- List attendees: `/list [event name]`
+- Help: `/help`
+
+### Requirements
 RSVP bot is written in [Kotlin](https://kotlinlang.org/), with build managed by [Gradle](https://gradle.org/)
 
-Requirements:
-- **Java**
+**Java**
 -- check current version `java -version`
 -- install (with homebrew) `brew update && brew cask install java`
 -- install (manual) [https://www.java.com/en/download/help/download_options.xml](https://www.java.com/en/download/help/download_options.xml)
-- **Gradle**
+
+**Gradle**
 -- check current version `gradle -v`
 -- install with homebrew `brew update && brew install gradle`
 -- install with scoop `scoop install gradle`
 
-Steps:
+### Installation
 - `git clone https://github.com/JulijanasJezov/telegram-rsvp-bot.git`
 - `cd ./telegram-rsvp-bot`
 - `gradle build`
