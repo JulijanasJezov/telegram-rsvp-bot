@@ -50,8 +50,8 @@ class RsvpBot(private val rsvpService: RsvpService, private val attendeesService
 
         if (keyword == START) sendMessage(
             message,
-            "I can help you create and manage events from within Telegram.\n" +
-            "You can control me by sending these commands:\n" +
+            "I can help you create and manage events from within Telegram.\n\n" +
+            "You can control me by sending these commands:\n\n" +
             helpMessage
         )
 
