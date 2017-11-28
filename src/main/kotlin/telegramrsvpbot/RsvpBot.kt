@@ -17,6 +17,7 @@ class RsvpBot(private val rsvpService: RsvpService, private val attendeesService
         val REMOVE_ATTENDEE = "/unrsvp"
         val RSVP_LIST = "/list"
         val HELP = "/help"
+        val START = "/start"
     }
 
     override fun onUpdateReceived(update: Update) {
@@ -41,10 +42,23 @@ class RsvpBot(private val rsvpService: RsvpService, private val attendeesService
 
         val keyword: String = words[0]
 
-        if (keyword == HELP) sendMessage(message, "Available commands: \n$CREATE_LIST list_name\n" +
-                "$ADD_ATTENDEE list_name\n" +
-                "$REMOVE_ATTENDEE list_name\n" +
-                "$RSVP_LIST list_name")
+        val helpMessage: String =
+            "Type $CREATE_LIST 'event name' to create a new event\n" +
+            "Type $ADD_ATTENDEE 'event name' to add an attendee to the current event\n" +
+            "Type $REMOVE_ATTENDEE 'event name' to remove an attendee from the current event\n" +
+            "Type $RSVP_LIST 'event name' to view the current attendees of the event"
+
+        if (keyword == START) sendMessage(
+            message,
+            "I can help you create and manage events from within Telegram.\n\n" +
+            "You can control me by sending these commands:\n\n" +
+            helpMessage
+        )
+
+        if (keyword == HELP) sendMessage(
+            message,
+            helpMessage
+        )
 
         if (words.size == 2) {
             when (keyword) {
