@@ -46,7 +46,7 @@ class RsvpBot(private val rsvpService: RsvpService, private val attendeesService
             "Type $CREATE_LIST 'event name' to create a new event\n" +
             "Type $ADD_ATTENDEE 'event name' to add an attendee to the current event\n" +
             "Type $REMOVE_ATTENDEE 'event name' to remove an attendee from the current event\n" +
-            "Type $RSVP_LIST 'list name' to view the current attendees of the event"
+            "Type $RSVP_LIST 'event name' to view the current attendees of the event"
 
         if (keyword == START) sendMessage(
             message,
