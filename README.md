@@ -11,8 +11,8 @@ Features include:
 
 ### Usage
 - Create an event: `/create [event name]`
-- Add attendee: `/rsvp [attendee name]`
-- Remove attendee: `/unrsvp [attendee name]`
+- Add self as attendee: `/rsvp [event name]`
+- Remove self as attendee: `/unrsvp [event name]`
 - List attendees: `/list [event name]`
 - Help: `/help`
 
